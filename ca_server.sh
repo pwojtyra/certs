@@ -29,7 +29,7 @@ openssl req -nodes -new -sha256 \
 
 echo --- creating the SERVER CERT
 openssl ca -config ${DIR}/${SERVER_NAME}.cnf -extensions server_cert \
-	-days 100 -notext -md sha256 \
+	-days 730 -notext -md sha256 \
 	-in ${INTER_DIR}/csr/${SERVER_NAME}.csr.pem \
 	-out ${INTER_DIR}/certs/${SERVER_NAME}.cert.pem
 
